@@ -1,0 +1,664 @@
+@charset "Utf-8";
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(49, 49, 49);
+}
+/* ---------------------------------------------------------------- */
+/* === ESTILOS GERAIS DO LAYOUT === */
+/* ---------------------------------------------------------------- */
+
+header{
+    position: fixed;
+    top: 0;
+    width: 90%;
+    margin-top: 30px;
+    max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+
+.nav{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0px 15px;
+}
+
+.nav img{
+    width: 16px;
+    height: 16px;
+}
+
+.separacao-icones{
+    background-color: rgb(255, 255, 255);
+    width: 20px;
+    height: 3px;
+    min-width: 20px;
+    min-height: 3px;
+    border-radius: 5px;
+}
+.nav img, .separacao-icones {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.nav li a{
+    text-decoration: none;
+}
+
+.page-section * {
+  pointer-events: auto;
+}
+
+.page-section {
+    max-height: 100dvh;
+}
+
+#section1{
+    background-image: url(backgroundfigma/background\ s1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+
+#textossection1 {
+    margin-top: 35dvh;
+    text-align: center;
+    margin-bottom: 10dvh;
+}
+#textossection1 h1{color: #D1D1CD;}
+#textossection1 h2{color: #83858D;}
+#textossection1 p{color: #ffffff;font-family: 'mooli' ;text-shadow: rgba(0, 0, 0, 0.404) 1px 1px 1px;}
+
+/* tamanho dos textos seção1 */
+
+#titulo1s1{font-family: 'mooli';font-size: 2rem;text-shadow: rgba(0, 0, 0, 0.329) 1px 1px 1px;}
+#subtitulo1s1{font-family: Poppins;font-size: 1.1rem;margin: 5px 0px;}
+#subtitulo2s1{font-family: Poppins;font-size:1.2rem;margin: 5px 0px;}
+#subtitulo3s1{font-family: Poppins;font-size:1.3rem;margin: 5px 0px;}
+#subtitulo4s1{margin: 0px 20px;font-size: 1rem;font-family: 'mooli';text-shadow: rgba(0, 0, 0, 0.301) 1px 1px 1px}
+
+#section3{
+    height: 100dvh;
+    background-image: url(backgroundfigma/backgrounds3.webp);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#textossection3{
+    text-align: center;
+    margin-top: 20dvh;
+}
+#titulo1s3{font-family: 'montserrat';font-size: 2rem;margin-top: 5px;margin-bottom: 10px;}
+#subtitulo1s3{font-family: 'montserrat';font-size: 1.3rem;margin-top: 5px;margin-bottom: 20px;}
+#localizacao1s3{width: 50px; height: 50px;}
+#subtitulo2s3{font-family: 'mooli';font-size: 1rem;margin-top: 15px;margin-bottom: 5px;text-shadow: rgba(0, 0, 0, 0.342) 1px 1px 5px;}
+
+/* Estilos do botão de localização (Mantidos e Centralizados) */
+.buttonlinkmiddle{
+    background-color: #e6e6e6;
+    border-radius:60px;
+    margin-bottom: 2dvh;
+    display: flex;
+    align-items: center; /* Garante alinhamento vertical */
+    text-decoration: none;
+    padding: 5px 5px 5px 0px;
+}
+
+.buttonlinkmiddle span{font-size: 25px;color: #194479;font-weight: 500;margin:0px 15px 0px 0px;font-family: 'mukta malar';padding: 0px 0px 0px 10px;}
+#instalogo{
+    background-color: #f4fff600;
+}
+#instalogo img{width: 55px;
+}
+
+.buttonlinkmiddle div{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    align-items: center; /* Centraliza verticalmente a imagem */
+    justify-content: center; /* Centraliza horizontalmente a imagem */
+}
+#backgroundzap{background-color: #00c721;}
+
+.buttonlinkmiddle div img{width: 20px;}
+
+.buttonlinkmiddle:hover{
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 0px 20px;
+    transition: 0.5s;
+}
+#localizacao1s3:hover{
+    transform: translateY(-2px);
+    transition: 0.5s;
+}
+.faixa ul{
+    display: flex;
+    list-style: none;
+}
+
+#section2 {
+    background-image:
+    linear-gradient(
+        to bottom,
+      rgb(249, 206, 52, 0.52) 0%,   /* amarelo translúcido */
+      rgb(238, 42, 124, 0.40) 58%,  /* rosa translúcido */
+      rgba(98, 40, 215, 0.42) 100%   /* roxo translúcido */
+    ),
+    url("backgroundfigma/fundo2e4.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+
+
+.conteiner-instagram{
+    /* REMOVA: margin-top: 10vh; - JÁ ALINHADO PELO JUSTIFY-CONTENT */
+    background-color: #E6E6E6;
+    width: 80%;
+    height: 5%;
+    /* Altura definida por proporção (padding-bottom), para não depender do height fixo/relativo */
+    /* Se a imagem for quadrada, use 80%. Se for mais alta, use um valor maior (ex: 100%) */
+    padding-bottom: 80%; /* Altura é 80% da largura. Ajuste conforme a proporção das suas imagens */
+    position: relative; /* Essencial para o padding-bottom funcionar como altura */
+    border-radius: 25px;
+    margin: 10dvh 0px 2dvh 0px; /* Margem vertical para centralizar melhor */
+    max-height: 450px; /* Define uma altura máxima se as imagens ficarem muito grandes em telas maiores */
+}
+
+.faixa {
+  width: 100%;
+  overflow: hidden;
+  background-color: #d9d9d99a; /* cor da faixa */
+  position: relative;
+}
+
+.faixa__conteudo {
+  display: flex;
+  width: max-content;
+  animation: moverFaixa 20s linear infinite;
+}
+
+.faixa ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  font-family: 'mukta malar', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.faixa li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.faixa img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+#faixas4{
+    margin-bottom: 1dvh;
+}
+
+/* 🎞️ Animação contínua */
+@keyframes moverFaixa {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ========================== */
+/* === SLIDER INSTAGRAM ==== */
+/* ========================== */
+.conteiner-insta {
+    position: absolute; /* Ocupa todo o espaço do contêiner pai */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%; /* Garante que o slide ocupe a altura do slider */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém preenchendo, mas a proporção do contêiner está mais estável agora */
+    border-radius: 25px;
+}
+
+/* Bolinhas indicadoras */
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dots button.active {
+  background-color: white;
+}
+
+
+
+#section4 {
+    background-image:
+    linear-gradient(
+        to bottom,
+      rgb(101, 206, 70,0.40),
+      rgb(68, 153, 44,0.75)),
+    url("backgroundfigma/fundo2e4.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+}
+#buttonzap{
+    margin-top: 2dvh;
+}
+
+#nota{margin-top: 10dvh;}
+#nota a{
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 4px;
+    gap: 20px;
+    margin-top: 10dvh;
+    font-family: 'mooli';
+    text-decoration: none;
+    color: rgb(0, 86, 156);
+    margin: 10px 0px;
+    font-size: 12px;
+}
+#nota div{
+    display: flex;
+    align-items: center;
+}
+#nota div img{width: 2dvh;}
+
+#experiencia{text-decoration: none;}
+
+
+#nota a:hover{
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 0px 20px;
+    transition: 0.5s;
+}
+
+/* === QUADRO MODELO FIXO (mantém 45vh x 60vh) === */
+#quadro-modelo {
+  background: white;
+  width: 80%;
+  height: 60dvh;
+  margin-top: 12dvh;
+  border-radius: 18px;
+  box-shadow: rgba(0,0,0,0.25) 0 5px 15px;
+  overflow: hidden;            /* ESSENCIAL: esconde o que não cabe */
+  position: relative;
+  display: flex;
+  align-items: stretch;        /* garante altura inteira */
+  justify-content: flex-start;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* SLIDER: strip perfeito sem gaps */
+.review-slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(.22,.9,.3,1);
+  will-change: transform;
+  gap: 0;                       /* remove espaços entre slides */
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* CADA REVIEW: ocupa EXATAMENTE 100% do quadro (sem margens escondidas) */
+.review {
+  flex: 0 0 100%;               /* travado para 100% da largura do container */
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 3dvh 2.4dvh;           /* espaçamento interno */
+  overflow-y: auto;             /* rolagem vertical se o texto for longo */
+  scroll-behavior: smooth;
+}
+
+/* Tipografia ajustável (não quebra) */
+.review h3 {
+  color: #1a4d8c;
+  margin: 0 0 1dvh 0;
+  font-size: clamp(1rem, 1.8dvh, 1.4rem);
+}
+.review p {
+  margin: 0;
+  font-size: clamp(0.85rem, 1.65dvh, 1.05rem);
+  line-height: 1.45;
+  color: #333;
+}
+
+/* INDICADORES (bolinhas) */
+.review-dots {
+  position: absolute;
+  bottom: 1.6dvh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+  pointer-events: auto;
+}
+.review-dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: #0f4b7a;    /* cor base */
+  opacity: 0.35;         /* baixa opacidade por padrão */
+  transition: opacity .25s ease, transform .18s ease;
+  cursor: pointer;
+}
+.review-dots button.active {
+  opacity: 1;            /* ativa mais visível */
+  transform: scale(1.12);
+}
+
+/* Ajuste mobile: quando a tela ficar pequena, usar vw para manter comportamento */
+@media (max-width: 600px) {
+  #quadro-modelo { width: 80dvw; height: 55dvh; margin-top: 10dvh; }
+  .review-dots { bottom: 1.2dvh; gap: 6px; }
+  .review-dots button { width: 8px; height: 8px; }
+}
+
+
+/* ------------------------------------------------------------------ */
+/* === SCROLL INDICATOR - CLASSE (ESTRUTURA COMPARTILHADA) === */
+/* ------------------------------------------------------------------ */
+
+
+.scroll-indicator {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: auto;
+    border-radius: 50%;
+    /* Cor de fundo removida daqui para ser controlada APENAS pelos IDs */
+}  
+
+/* IDs para aplicar cores diferentes (Prioridade Alta) */
+/* ATENÇÃO: Verifique se o nome no seu CSS corresponde ao nome no seu HTML (#scroll-indicator-s1) */
+
+
+
+/* ----------------------------------------------------------------- */
+/* === TEXTO CURVO GIRANDO (NÃO REMOVA ESTES BLOCOS DE ANIMAÇÃO) === */
+/* ----------------------------------------------------------------- */
+
+.scroll-indicator {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotation-wrapper {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation: rotate 20s linear infinite;
+  transform-origin: 50% 50%; /* garante que gira pelo centro */
+}
+
+.scroll-indicator svg {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  fill: white;
+  transform-box: fill-box; /* necessário para browsers novos */
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.circle-arrow {
+  position: relative;
+  z-index: 10;
+}
+
+.arrow-icon {
+  font-size: 2rem;
+  color: white;
+  animation: arrowBounce 2s infinite;
+}
+
+@keyframes arrowBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
+/* Usando SVG para o texto seguir o círculo */
+.scroll-indicator svg {
+    font-family: 'Poppins', sans-serif;
+    fill: rgb(255, 255, 255);
+    width: 100px;
+    height: 100px;
+    font-size: 0.9em;
+    letter-spacing: 10px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
+
+/* Círculo e seta */
+.circle-arrow {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animação de pulo da seta */
+.arrow-icon {
+    font-size: 2.5em;
+    color: rgb(253, 253, 253);
+    animation: arrowBounce 2s infinite;
+}
+
+/* ---------------------------------------------------------------- */
+/* === KEYFRAMES (O CORAÇÃO DAS ANIMAÇÕES) === */
+/* ---------------------------------------------------------------- */
+
+/* Pulo da seta - SINTAXE CORRIGIDA E LIMPA */
+@keyframes arrowBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+
+#scroll-indicator-s1 { 
+    background-color: rgb(1, 26, 53,0.63); /* Usando a nova cor #4b89cf */
+}
+#scroll-indicator-s2 {
+    background-color: #79345E; /* Cor da Seção 3 */
+    margin: 2dvh 0px 0dvh 0px;
+}
+#scroll-indicator-s3 {
+    background-color: #AC4423; /* Cor da Seção 3 */
+    margin: 0px 0px 1dvh 0px;
+}
+/* ===================================================== */
+/* === EFEITO DE TRANSIÇÃO CIRCULAR ENTRE SEÇÕES ======= */
+/* ===================================================== */
+
+/* Área invisível que cria a altura de rolagem total */
+.scroll-area {
+  height: 400dvh; /* 4 seções = 400% da tela */
+  background: transparent;
+}
+
+/* Palco fixo que exibe as seções empilhadas */
+
+/* Palco fixo, centralizado e CLIPADO em 640px */
+.stage {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;   /* <<< limite duro */
+  overflow: hidden;   /* <<< tudo que passar, some */
+  pointer-events: none; /* você já usa pointer-events nos filhos */
+  z-index: 0;
+  will-change: transform, clip-path;
+}
+
+
+/* Cada seção (página) sobreposta */
+.page-section {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 50% 50%);
+  -webkit-clip-path: circle(0% at 50% 50%);
+  will-change: clip-path;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  transition: background-color 2s ease;
+}
+
+/* Primeira seção já visível */
+#section1 {
+  clip-path: none;
+}
+
+
+/* Suaviza rolagem no navegador */
+html, body {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  height: 100%;
+  width: 100%;
+}
+
+
+.main-wrapper {
+  width: 100%;
+  max-width: 640px;       /* limite de largura */
+  margin: 0 auto;         /* centraliza horizontalmente */
+  background-color: inherit; /* mantém o fundo geral */
+}
+
+
