@@ -541,8 +541,9 @@ html,
 body {
   scroll-behavior: smooth;
   overscroll-behavior: none;
-  height: 100%;
-  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 .main-wrapper {
