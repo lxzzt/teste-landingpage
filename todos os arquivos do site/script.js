@@ -231,3 +231,85 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// === FUNÇÃO UNIVERSAL DE FADE SLIDER COM SWIPE ===
+function initFadeSlider(containerSelector, slideSelector, dotsSelector, intervalTime = 4000) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+
+  const slides = container.querySelectorAll(slideSelector);
+  const dotsContainer = container.querySelector(dotsSelector);
+  let currentIndex = 0;
+  let startX = 0;
+  let isDragging = false;
+  let autoSlide;
+
+  // Criar bolinhas
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.addEventListener("click", () => showSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+  const dots = dotsContainer.querySelectorAll("button");
+
+  function showSlide(index) {
+    slides[currentIndex].classList.remove("active");
+    dots[currentIndex].classList.remove("active");
+    currentIndex = (index + slides.length) % slides.length;
+    slides[currentIndex].classList.add("active");
+    dots[currentIndex].classList.add("active");
+  }
+
+  // Inicializa
+  showSlide(0);
+
+  // Auto troca
+  function startAuto() {
+    autoSlide = setInterval(() => showSlide(currentIndex + 1), intervalTime);
+  }
+  function stopAuto() {
+    clearInterval(autoSlide);
+  }
+
+  // Eventos de toque/arraste (mobile e desktop)
+  container.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    stopAuto();
+  });
+  container.addEventListener("touchend", (e) => {
+    if (!isDragging) return;
+    const diff = e.changedTouches[0].clientX - startX;
+    if (Math.abs(diff) > 50) {
+      showSlide(currentIndex + (diff < 0 ? 1 : -1));
+    }
+    isDragging = false;
+    startAuto();
+  });
+
+  // Suporte para mouse arraste (desktop)
+  container.addEventListener("mousedown", (e) => {
+    startX = e.pageX;
+    isDragging = true;
+    stopAuto();
+  });
+  container.addEventListener("mouseup", (e) => {
+    if (!isDragging) return;
+    const diff = e.pageX - startX;
+    if (Math.abs(diff) > 50) {
+      showSlide(currentIndex + (diff < 0 ? 1 : -1));
+    }
+    isDragging = false;
+    startAuto();
+  });
+
+  startAuto();
+}
+
+// === INICIALIZA OS SLIDERS ===
+document.addEventListener("DOMContentLoaded", () => {
+  // 🟣 Seção 2 (Instagram)
+  initFadeSlider(".conteiner-instagram", ".fade-slide", ".fade-dots", 4000);
+
+  // 🟢 Seção 4 (Reviews)
+  initFadeSlider("#quadro-modelo", ".fade-review", ".review-dots", 5000);
+});
