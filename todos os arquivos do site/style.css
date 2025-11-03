@@ -99,7 +99,7 @@ header{
 
 #section3{
     height: 100dvh;
-    background-image: url(backgroundfigma/backgrounds3.webp);
+    background-image: url(backgroundfigma/backgrounds3.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -251,6 +251,10 @@ header{
 /* ========================== */
 /* === SLIDER INSTAGRAM ==== */
 /* ========================== */
+.conteiner-instagram{
+  width: 290px;
+  height: 200px;
+}
 .conteiner-insta {
     position: absolute; /* Ocupa todo o espaço do contêiner pai */
     top: 0;
@@ -584,7 +588,7 @@ header{
 
 
 #scroll-indicator-s1 { 
-    background-color: rgb(1, 26, 53,0.63); /* Usando a nova cor #4b89cf */
+    background-color: rgba(0, 0, 0, 0.63); /* Usando a nova cor #4b89cf */
 }
 #scroll-indicator-s2 {
     background-color: #79345E; /* Cor da Seção 3 */
