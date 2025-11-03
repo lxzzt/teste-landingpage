@@ -185,7 +185,7 @@ header{
 .conteiner-instagram{
     /* REMOVA: margin-top: 10vh; - JÁ ALINHADO PELO JUSTIFY-CONTENT */
     background-color: #E6E6E6;
-    width: 100%;
+    width: 80%;
     height: 100%;
     /* Altura definida por proporção (padding-bottom), para não depender do height fixo/relativo */
     /* Se a imagem for quadrada, use 80%. Se for mais alta, use um valor maior (ex: 100%) */
@@ -651,8 +651,7 @@ html, body {
 
 
 .main-wrapper {
-  width: 100%;
-  max-width: 640px;       /* limite de largura */
+  width: 100%;       /* limite de largura */
   margin: 0 auto;         /* centraliza horizontalmente */
   background-color: inherit; /* mantém o fundo geral */
 }
