@@ -396,6 +396,7 @@ header{
   gap: 0;                       /* remove espaços entre slides */
   align-items: stretch;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* CADA REVIEW: ocupa EXATAMENTE 100% do quadro (sem margens escondidas) */
