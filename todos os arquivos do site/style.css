@@ -6,7 +6,7 @@
     margin: 0;
 }
 body{
-    background-color: rgb(49, 49, 49);
+    background-color: rgba(0, 0, 0, 0.89);
 }
 /* ---------------------------------------------------------------- */
 /* === ESTILOS GERAIS DO LAYOUT === */
@@ -454,11 +454,6 @@ header{
 }
 
 /* Ajuste mobile: quando a tela ficar pequena, usar vw para manter comportamento */
-@media (max-width: 600px) {
-  #quadro-modelo { width: 80dvw; height: 55dvh; margin-top: 10dvh; }
-  .review-dots { bottom: 1.2dvh; gap: 6px; }
-  .review-dots button { width: 8px; height: 8px; }
-}
 
 
 /* ------------------------------------------------------------------ */
