@@ -6,7 +6,7 @@
     margin: 0;
 }
 body{
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: rgba(24, 24, 24, 0.89);
 }
 /* ---------------------------------------------------------------- */
 /* === ESTILOS GERAIS DO LAYOUT === */
@@ -651,9 +651,12 @@ html, body {
 
 
 .main-wrapper {
-  width: 100%;       /* limite de largura */
+  width: 100%;
+       /* limite de largura */
   margin: 0 auto;         /* centraliza horizontalmente */
   background-color: inherit; /* mantém o fundo geral */
 }
-
+.scroll-area{  width: 100%;       /* limite de largura */
+  margin: 0 auto;         /* centraliza horizontalmente */
+  background-color: inherit; }
 
