@@ -81,9 +81,8 @@ header{
 
 
 #textossection1 {
-    margin-top: 35dvh;
+    margin: 35dvh 40px 10dvh 40px;
     text-align: center;
-    margin-bottom: 10dvh;
 }
 #textossection1 h1{color: #D1D1CD;}
 #textossection1 h2{color: #83858D;}
@@ -95,7 +94,7 @@ header{
 #subtitulo1s1{font-family: Poppins;font-size: 1.1rem;margin: 5px 0px;}
 #subtitulo2s1{font-family: Poppins;font-size:1.2rem;margin: 5px 0px;}
 #subtitulo3s1{font-family: Poppins;font-size:1.3rem;margin: 5px 0px;}
-#subtitulo4s1{margin: 0px 20px;font-size: 1rem;font-family: 'mooli';text-shadow: rgba(0, 0, 0, 0.301) 1px 1px 1px}
+#subtitulo4s1{font-size: 1rem;font-family: 'mooli';text-shadow: rgba(0, 0, 0, 0.301) 1px 1px 1px}
 
 #section3{
     height: 100dvh;
@@ -144,9 +143,7 @@ header{
     justify-content: center; /* Centraliza horizontalmente a imagem */
 }
 #backgroundzap{background-color: #00c721;}
-
 .buttonlinkmiddle div img{width: 20px;}
-
 .buttonlinkmiddle:hover{
     transform: translateY(-2px);
     box-shadow: rgba(0, 0, 0, 0.26) 0px 0px 20px;
@@ -186,12 +183,11 @@ header{
     /* REMOVA: margin-top: 10vh; - JÁ ALINHADO PELO JUSTIFY-CONTENT */
     background-color: #E6E6E6;
     width: 80%;
-    height: 100%;
     /* Altura definida por proporção (padding-bottom), para não depender do height fixo/relativo */
     /* Se a imagem for quadrada, use 80%. Se for mais alta, use um valor maior (ex: 100%) */
     padding-bottom: 80%; /* Altura é 80% da largura. Ajuste conforme a proporção das suas imagens */
     position: relative; /* Essencial para o padding-bottom funcionar como altura */
-    border-radius: 25px;
+    border-radius: 10px;
     margin: 10dvh 0px 2dvh 0px; /* Margem vertical para centralizar melhor */
     max-height: 450px; /* Define uma altura máxima se as imagens ficarem muito grandes em telas maiores */
 }
@@ -292,7 +288,7 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover; /* Mantém preenchendo, mas a proporção do contêiner está mais estável agora */
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 /* Bolinhas indicadoras */
@@ -376,8 +372,9 @@ header{
 #quadro-modelo {
   background: white;
   width: 80%;
-  height: 60dvh;
+  height: 40dvh;
   margin-top: 12dvh;
+  margin-bottom: 2dvh;
   border-radius: 18px;
   box-shadow: rgba(0,0,0,0.25) 0 5px 15px;
   overflow: hidden;            /* ESSENCIAL: esconde o que não cabe */
@@ -658,5 +655,5 @@ html, body {
 }
 .scroll-area{  width: 100%;       /* limite de largura */
   margin: 0 auto;         /* centraliza horizontalmente */
-  background-color: inherit; }
+  background-color: inherit;}
 
