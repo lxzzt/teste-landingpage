@@ -83,7 +83,7 @@ header {
 }
 
 #textossection1 {
-  margin: 35dvh 0px 10dvh 0px;
+  margin: 35dvh 0px 2dvh 0px;
   text-align: center;
   max-width: 85%;
 }
@@ -250,6 +250,7 @@ header {
   overflow: hidden;
   background-color: #d9d9d99a;
   position: relative;
+  top: 30px;
 }
 
 .faixa__conteudo {
