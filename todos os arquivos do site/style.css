@@ -85,7 +85,7 @@ header {
 #textossection1 {
   margin: 35dvh 0px 10dvh 0px;
   text-align: center;
-  max-width: 80%;
+  max-width: 85%;
 }
 
 #textossection1 h1 {
@@ -620,3 +620,5 @@ body {
   background-color: #000;
   transform: scale(1.1);
 }
+
+#section4 h1{color: white;font-family: mooli;font-size: 1.5rem;}
