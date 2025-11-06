@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
       trigger: ".scroll-area",
       start: "top top",
       end: "bottom bottom",
-      scrub: 1.5,
+      scrub: 2,
     }
   });
 
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
     trigger: ".scroll-area",
     start: "top top",
     end: "bottom bottom",
-    scrub: 1,
+    scrub: 2,
     onUpdate: (self) => {
       const progress = self.progress; // valor entre 0 e 1
       const etapa = progress * (totalSecoes - 1);
