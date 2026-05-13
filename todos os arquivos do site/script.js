@@ -152,7 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
       trigger: ".scroll-area",
       start: "top top",
       end: "bottom bottom",
-      scrub: 2,
+      scrub: 1.5,
+      anticipatePin: 1,
     }
   });
 
@@ -166,8 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
       { clipPath: "circle(0% at 50% 50%)" },
       { 
         clipPath: "circle(150% at 50% 50%)",
-        ease: "power2.out",
-        duration: 1
+        ease: "none",
+        duration: 1,
+        force3D: true,
       },
       i // deslocamento relativo (cada seção entra em sequência)
     );

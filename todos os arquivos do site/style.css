@@ -494,27 +494,26 @@ header {
 /* ===================================================== */
 
 .scroll-area {
-  height: 400dvh;
-  background: transparent;
+  position: relative;
+  height: 400dvh; /* Altura total do scroll */
   width: 100%;
-  margin: 0 auto;
-  background-color: inherit;
+  z-index: 1; /* Fica por baixo para receber o touch/scroll do body */
+  pointer-events: none; /* Deixa o scroll natural do body agir */
 }
 
 /* palco fixo */
 .stage {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  height: 100dvh;
   max-width: 390px;
   overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-  will-change: transform, clip-path;
-}
+  pointer-events: none; /* Permite que o scroll "passe através" dele */
+  z-index: 5; /* Fica acima visualmente */
+  will-change: transform;
 
 /* cada seção empilhada */
 .page-section {
@@ -524,7 +523,7 @@ header {
   height: 100%;
   clip-path: circle(0% at 50% 50%);
   -webkit-clip-path: circle(0% at 50% 50%);
-  will-change: clip-path;
+  will-change: clip-path , opacity;
   display: flex;
   justify-content: center;
   align-items: center;
