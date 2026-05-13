@@ -514,6 +514,7 @@ header {
   pointer-events: none; /* Permite que o scroll "passe através" dele */
   z-index: 5; /* Fica acima visualmente */
   will-change: transform;
+}
 
 /* cada seção empilhada */
 .page-section {
